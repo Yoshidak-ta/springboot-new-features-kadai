@@ -1,0 +1,26 @@
+package com.example.samuraitravel.controller;
+
+import org.springframework.stereotype.Controller;
+
+import com.example.samuraitravel.form.ReviewForm;
+import com.example.samuraitravel.repository.ReviewRepository;
+import com.example.samuraitravel.service.ReviewService;
+
+@Controller
+public class ReviewListController {
+	private final ReviewRepository reviewRepository;
+	private final ReviewService reviewService;
+	private final ReviewForm reviewForm;
+	
+	public ReviewListController( ReviewRepository reviewRepository, ReviewService reviewService, ReviewForm reviewForm) {
+		this.reviewRepository = reviewRepository;
+		this.reviewService = reviewService;
+		this.reviewForm = reviewForm;
+	}
+	
+	@GetMapping("/reviews")
+	public String index(@PageableDefault(page = 0, size = 10, sort = "id")Pageable pageable, Model model) {
+		
+	}
+
+}

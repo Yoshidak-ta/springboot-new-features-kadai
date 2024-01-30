@@ -1,0 +1,15 @@
+package com.example.samuraitravel.controller;
+
+@Controller
+public class ReviewListController {
+	private final ReviewRepository reviewRepository;
+	private final ReviewSrvice reviewService;
+	private final ReviewForm reviewForm;
+	
+	public ReviewListController( ReviewRepository reviewRepository, ReviewSrvice reviewService, ReviewForm reviewForm) {
+		this.reviewRepository = reviewRepository;
+		this.reviewService = reviewService;
+		this.reviewForm = reviewForm;
+	}
+
+}

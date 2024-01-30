@@ -1,0 +1,16 @@
+package com.example.samuraitravel.controller;
+
+import org.springframework.stereotype.Controller;
+
+import com.example.samuraitravel.repository.ReviewRepository;
+
+@Controller
+public class ReviewPostController {
+  private final ReivewRepository reviewRepository;
+  private final ReviewSrevice reviewService;
+  
+  public ReviewPostController(ReviewRepository reviewRepository, ReviewSrevice reviewService) {
+	  this.reviewRepository = reviewRepository;
+	  this.reivewService = reviewService;
+  }
+}

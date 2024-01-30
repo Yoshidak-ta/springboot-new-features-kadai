@@ -1,0 +1,20 @@
+package com.example.samuraitravel.controller;
+
+import org.springframework.stereotype.Controller;
+
+import com.example.samuraitravel.repository.ReviewRepository;
+import com.example.samuraitravel.service.ReviewService;
+
+@Controller
+@RequestMapping("/house/{houseId}/reviews")
+public class ReviewPostController {
+  private final ReviewRepository reviewRepository;
+  private final ReviewService reviewService;
+  
+  public ReviewPostController(ReviewRepository reviewRepository, ReviewService reviewService) {
+	  this.reviewRepository = reviewRepository;
+	  this.reviewService = reviewService;
+  }
+  
+  
+}
