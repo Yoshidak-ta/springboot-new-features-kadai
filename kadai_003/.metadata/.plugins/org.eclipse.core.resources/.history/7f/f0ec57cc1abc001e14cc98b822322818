@@ -1,0 +1,17 @@
+package com.example.samuraitravel.service;
+
+@Service
+public class FavoriteService {
+	private final FavoriteRepository favoriteRepository;
+	
+	public FavoriteService {
+		this.favoriteRepository = favoriteRepository;
+	}
+	
+	@Transactional
+	public void subscribe(House house, User user, Favorite favorite) {
+		Favorite favorite = new Favorite();
+		
+		
+	}
+}

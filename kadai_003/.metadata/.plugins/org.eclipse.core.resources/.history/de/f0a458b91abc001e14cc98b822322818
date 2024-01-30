@@ -1,0 +1,7 @@
+package com.example.samuraitravel.service;
+
+@Service
+public class FavoriteService {
+	@Transactional
+	public void 
+}

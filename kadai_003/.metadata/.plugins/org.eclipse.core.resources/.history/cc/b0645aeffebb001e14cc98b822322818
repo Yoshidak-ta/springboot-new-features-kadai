@@ -1,0 +1,15 @@
+package com.example.samuraitravel.entity;
+
+@Entity
+@Tabel(name = "favorites")
+@Data
+public class Favorite {
+	@id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
+	private Integer id;
+	
+	@Column(name = "house_id")
+	private House house;
+
+}

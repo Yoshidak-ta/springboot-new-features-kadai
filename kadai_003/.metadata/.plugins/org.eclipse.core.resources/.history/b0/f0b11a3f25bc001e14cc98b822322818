@@ -1,0 +1,11 @@
+package com.example.samuraitravel.controller;
+
+@Controller
+@AllArgsConstructor
+public class FavoriteController {
+	private final FavoriteRepository favoriteRepository;
+	private final HouseRepository houseRepository;
+	private final FavoriteService favoriteService;
+
+	
+}

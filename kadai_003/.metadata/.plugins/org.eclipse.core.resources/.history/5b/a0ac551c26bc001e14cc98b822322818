@@ -1,0 +1,19 @@
+package com.example.samuraitravel.controller;
+
+import org.springframework.stereotype.Controller;
+
+import com.example.samuraitravel.repository.FavoriteRepository;
+import com.example.samuraitravel.repository.HouseRepository;
+import com.example.samuraitravel.service.FavoriteService;
+
+import lombok.AllArgsConstructor;
+
+@Controller
+@AllArgsConstructor
+public class FavoriteController {
+	private final FavoriteRepository favoriteRepository;
+	private final HouseRepository houseRepository;
+	private final FavoriteService favoriteService;
+
+	
+}
