@@ -22,33 +22,33 @@
                                  </ol>
                              </nav> 
                              
-                             <h1 class="mb-3 text-center">お気に入り一覧</h1> 
+                             <h1 class="mb-4 text-center">お気に入り一覧</h1> 
                              
-                             <div class="mb-3" th:each="favorite : ${favorite}">
-                                 <a th:href="@{/houses/__${house.getId()}__}" class="link-dark samuraitravel-card-link">
+                             <div class="mb-3" th:each="favorite : ${favoritePage}">
+                                 <a th:href="@{/houses/__${favorite.getHouse().getId()}__}" class="link-dark samuraitravel-card-link">
                                      <div class="card h-100">   
                                          <div class="row g-0">
                                              <div class="col-md-4">                                                                                
-                                                 <img th:if="${house.getImageName()}" th:src="@{/storage/__${house.getImageName()}__}" class="card-img-top samuraitravel-horizontal-card-image" alt="店舗画像">                                                     
-                                                 <img th:unless="${house.getImageName()}" th:src="@{/images/noImage.png}" class="card-img-top samuraitravel-horizontal-card-image" alt="NO IMAGE">                                                    
+                                                 <img th:if="${favorite.getHouse().getImageName()}" th:src="@{/storage/__${favorite.getHouse().getImageName()}__}" class="card-img-top samuraitravel-horizontal-card-image" alt="店舗画像">                                                     
+                                                 <img th:unless="${favorite.getHouse().getImageName()}" th:src="@{/images/noImage.png}" class="card-img-top samuraitravel-horizontal-card-image" alt="NO IMAGE">                                                    
                                              </div> 
                                              <div class="col-md-8">                                                                                                                        
                                                  <div class="card-body">                                    
-                                                     <h3 class="card-title mb-3" th:text="${house.getName()}"></h3>                                            
+                                                     <h3 class="card-title mb-3" th:text="${favorite.getHouse().getName()}"></h3>                                            
   
                                                      <hr class="mb-3">
                                                      
                                                      <p class="card-text mb-2">
-                                                         <span th:text="${house.getDescription()}"></span>
+                                                         <span th:text="${favorite.getHouse().getDescription()}"></span>
                                                      </p>                                                    
                                                      
                                                      <p class="card-text mb-2">
-                                                         <small class="text-muted" th:text="${'〒' + house.getPostalCode()}"></small>
-                                                         <small class="text-muted" th:text="${house.getAddress()}"></small>                                                      
+                                                         <small class="text-muted" th:text="${'〒' + favorite.getHouse().getPostalCode()}"></small>
+                                                         <small class="text-muted" th:text="${favorite.getHouse().getAddress()}"></small>                                                      
                                                      </p>   
                                                                                                                                                                                                                                     
                                                      <p class="card-text">
-                                                         <span th:text="${#numbers.formatInteger(house.getPrice(), 1, 'COMMA') + '円 / 泊'}"></span>
+                                                         <span th:text="${#numbers.formatInteger(favorite.getHouse().getPrice(), 1, 'COMMA') + '円 / 泊'}"></span>
                                                      </p>                                    
                                                  </div>
                                              </div>
